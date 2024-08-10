@@ -1,0 +1,179 @@
+
+/* base */
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    // outline: solid 1px;
+}
+
+/* utilities */
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+@media (max-width:992px) {
+    .container{
+        max-width: 992px;
+    }
+}
+
+.d-flex{
+    display: flex;
+}
+.d-block{
+    display: block;
+}
+.d-none{
+    display: none;
+}
+.f-wrap{
+    flex-wrap: wrap;
+}
+.fd-column{
+    flex-direction: column;
+}
+@media (max-width:576px) {
+    .fd-md-column{
+        flex-direction: column;
+    }
+    
+}
+.align-items-center{
+    align-items: center;
+}
+.align-items-end{
+    align-items: flex-end;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-end{
+    justify-content: flex-end;
+}
+.h1{
+    font-size: 64px;
+    color:#650300;
+    font-weight: bold;
+}
+.h2{
+    font-size: 48px;
+    color:#650300;
+    font-weight: bold;
+}
+.h3{
+    font-size: 36px;
+    color: #650300;
+}
+.h4{
+    font-size: 24px;
+    color: #650300;
+    font-weight: bold;
+}
+.fs-42{
+    font-size: 48px;
+}
+.fs-32{
+    font-size: 32px;
+}
+.fs-24{
+    font-size: 24px;
+}
+.text-align-left{
+    text-align: left;
+}
+.text-align-center{
+    text-align: center;
+}
+.mr-2{
+    margin-right: 8px;
+}
+.mr-6{
+    margin-right: 24px;
+}
+.mb-6{
+    margin-bottom: 24px;
+}
+.mb-2{
+    margin-bottom: 8px;
+}
+.mb-12{
+    margin-bottom: 48px;
+}
+.mb-4{
+    margin-bottom: 16px;
+}
+.mb-8{
+    margin-bottom: 32px;
+}
+.mb-18{
+    margin-bottom: 72px;
+}
+.p-0-16{
+    padding: 0 16px;
+}
+.p-80-0{
+    padding: 80px 0;
+}
+.g-24{
+    gap: 24px;
+}
+.g-48{
+    gap: 48px;
+}
+.roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+.roboto-black-normal{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: black;
+}
+.roboto-red-medium{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #AA0601;
+}
+
+.c-white{
+    color: white;
+}
+.c-black{
+    color: black;
+}
+.bg-white{
+    background: white;
+}
+.bg-black{
+    background: black;
+}
+
+/* component */
+.btn{
+    font-size: 20px;
+    color:white;
+    background-color: #AA0601;
+    padding:6px 12px;
+}

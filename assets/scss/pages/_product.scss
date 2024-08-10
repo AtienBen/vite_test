@@ -1,0 +1,92 @@
+.typeTitle{
+    li{
+        width: 33.33%;
+        border: 1px solid #DCDCDC;
+        padding: 24px 0;    
+    }
+    li:hover{
+        border-bottom: 8px solid #AA0601;
+    }
+    
+}
+@media (max-width:768px) {
+    .typeName{
+        font-size: 24px;
+    }
+    
+}
+
+@media (max-width:576px) {
+    .typeName{
+        font-size: 16px;
+    }
+    
+}
+
+.productBanner{
+    img{
+        width: 50%;
+    }
+}
+@media (max-width:576px) {
+    .productSlogan{
+        font-size: 24px;
+    }
+    
+}
+.productList{
+    gap: 24px;
+    li{
+        width: calc(25% - 18px);
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width:992px) {
+    .productList{
+        li{
+            width: calc(50% - 12px);
+            margin-bottom: 40px;
+        }
+    }
+    
+}
+@media (max-width:576px) {
+    .productList{
+        li{
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
+    
+}
+.productColor{
+    gap: 8px;
+}
+
+.colorBox1{
+    width: 24px;
+    height: 24px;
+    background-color: #5F3E2D;
+}
+.colorBox2{
+    width: 24px;
+    height: 24px;
+    background-color: #B75929;
+}
+.pageButton{
+    li{
+        border: 1px solid #555555;
+        padding:11px 12px;
+        a{
+            color: #555555;
+        }
+
+    }
+    li:hover{
+        background-color: black;
+        a{
+            color: white;
+        }
+    }
+}
