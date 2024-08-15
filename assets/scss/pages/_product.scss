@@ -28,65 +28,72 @@
         width: 50%;
     }
 }
-@media (max-width:576px) {
-    .productSlogan{
-        font-size: 24px;
-    }
-    
-}
-.productList{
-    gap: 24px;
-    li{
-        width: calc(25% - 18px);
-        margin-bottom: 80px;
-    }
-}
 
+.productMenu{
+    .productList{
+        gap:24px;
+        li{
+            width: calc(25% - 18px);
+            margin-bottom: 80px;
+        }
+    }
+    .pageButton{
+        li{
+            border: 1px solid #555555;
+            padding:11px 12px;
+            a{
+                color: #555555;
+            }
+    
+        }
+        li:hover{
+            background-color: black;
+            a{
+                color: white;
+            }
+        }
+    }
+}
 @media (max-width:992px) {
-    .productList{
-        li{
-            width: calc(50% - 12px);
-            margin-bottom: 40px;
+    .productMenu{
+        .productList{
+            li{
+                width: calc(50% - 12px);
+                margin-bottom: 40px;
+            }
         }
     }
     
 }
 @media (max-width:576px) {
-    .productList{
-        li{
-            width: 100%;
-            margin-bottom: 24px;
+    .productMenu{
+        .productSlogan{
+            font-size: 24px;
+        }
+        .productList{
+            li{
+                width: 100%;
+                margin-bottom: 24px;
+            }
+            .productColor{
+                gap: 8px;
+                .colorBox1{
+                    width: 24px;
+                    height: 24px;
+                    background-color: #5F3E2D;
+                }
+                .colorBox2{
+                    width: 24px;
+                    height: 24px;
+                    background-color: #B75929;
+                }
+            }
         }
     }
-    
-}
-.productColor{
-    gap: 8px;
 }
 
-.colorBox1{
-    width: 24px;
-    height: 24px;
-    background-color: #5F3E2D;
-}
-.colorBox2{
-    width: 24px;
-    height: 24px;
-    background-color: #B75929;
-}
-.pageButton{
-    li{
-        border: 1px solid #555555;
-        padding:11px 12px;
-        a{
-            color: #555555;
-        }
 
-    }
-    li:hover{
-        background-color: black;
-        a{
-            color: white;
-        }
-    }
-}
+
+
+
+
