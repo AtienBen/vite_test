@@ -1,3 +1,16 @@
+//mixin寫法for pad
+@mixin pad{
+  @media(max-width:992px){
+    @content;
+  }
+}
+//mixin寫法for mobile
+@mixin mobile{
+  @media(max-width:576px){
+    @content;
+  }
+}
+
 
 /* banner */
 .banner{
@@ -7,31 +20,21 @@
   background-position: center center;
   height: 787px;
   text-align: right;
-}
-@media (max-width:992px) {
-  .banner {
-      background-image: url(../images/home-header-sm.png);
-    }
-}
-@media (max-width:576px) {
-  .banner{
-      height: 396px;
+  @include pad{
+    background-image: url(../images/home-header-sm.png);
   }
-}
-
-.bannerTitle{
-  padding-top:296px;
-  padding-bottom: 296px;
-  .h1{
-    margin-bottom: 10px;
+  @include mobile{
+    height: 396px;
   }
-  .buyNow{
-    padding: 6px 12px;
-  }
-}
-
-@media (max-width:576px) {
   .bannerTitle{
+    height: 100%;
+    .h1{
+      margin-bottom: 10px;
+    }
+    .buyNow{
+      padding: 6px 12px;
+    }
+    @include mobile{
       align-items: flex-end;
       padding-top: 144px;
       padding-bottom: 144px;
@@ -41,75 +44,60 @@
       .h1{
         font-size: 24px;
       }
+    }
   }
 }
 
 
-
+//intro區
 .intro{
   background-color: #FBF2F2;
-}
-
-@media (max-width:576px) {
-  .intro{
+  @include mobile{
     .h2{
       font-size: 24px;
     }
   }
 }
 
+.introList{
+  .introCard{
+    width: 25%;
+  }
+  @include pad{
+    flex-wrap: wrap;
+    justify-content: center;
+    .introCard{
+      width: 47%;
+      margin-bottom: 24px;
+    }
+  }
+  @include mobile{
+    .introCard{
+      width: 100%;
+      img{
+        width: 100px;
+      }
+  }
+  }
+}
 
 /* 經典區 */
-.introCard{
-  width: 25%;
-}
-@media (max-width:992px) {
-  .introList{
-      flex-wrap: wrap;
-      justify-content: center;
-      .introCard{
-        width: 47%;
-        margin-bottom: 24px;
-    }
-  }
-  
-}
-
-@media (max-width:576px) {
-  .introList{
-    .introCard{
-        width: 100%;
-        img{
-          width: 100px;
-        }
-    }
-  }
-}
-
 .classic{
   padding-top: 80px;
   padding-bottom: 80px;
   .classicCard{
     width: 33.3333%;
   }
-}
-
-
-
-@media (max-width:992px) {
-  .classic{
+  @include pad{
     .classicList{
-        flex-wrap: wrap;
-        justify-content: center;
-        .classicCard{
-          width: 60%;
+      flex-wrap: wrap;
+      justify-content: center;
+      .classicCard{
+        width: 60%;
       }
-    }
+   }
   }
-  
-}
-@media (max-width:576px) {
-  .classic{
+  @include mobile{
     .classicTitle{
       font-size: 24px;
     }
@@ -126,57 +114,52 @@
   background-image: url(../images/index-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-@media (max-width:992px) {
-  .unionList{
+  @include pad{
+    .unionList{
       flex-wrap: wrap;
       gap: 24px;
+    }
   }
-}
-@media (max-width:576px) {
-  .union{
+  @include mobile{
     .unionTitle{
       font-size: 24px;
     }
   }
 }
 
+
 /* 顧客回饋 */
 .recommend{
   padding-top: 80px;
   padding-bottom: 80px;
-}
-.recommendCard{
-  box-shadow: 0px 2px 6px #00000029;
-  border: 1px solid #DEE2E6;
-  width: 24%;
-}
-
-@media (max-width:992px) {
+  .recommendTitle{
+    @include mobile{
+      font-size: 24px;
+    }
+  }
   .recommendList{
+    .recommendCard{
+      box-shadow: 0px 2px 6px #00000029;
+      border: 1px solid #DEE2E6;
+      width: 24%;
+    }
+    @include pad{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       .recommendCard{
           width: 48%;
       }
+    }
+    @include mobile{
+      padding: 40px 12px;
+      .recommendCard{
+        width: 100%;
+      }
+    }
   }
 }
 
-@media (max-width:576px) {
-  .recommend{
-    .recommendTitle{
-      font-size: 24px;
-    }
-    .recommendList{
-        padding: 40px 12px;
-        .recommendCard{
-            width: 100%;
-        }
-    }
-  }
-}
 
 /* 表單 */
 .contact{
@@ -199,6 +182,7 @@
       border: 1px solid black;
       padding-left: 12px;
       margin-bottom: 16px;
+      background-color: transparent;
     }
     .commentText{
       height: 136px;
@@ -209,45 +193,25 @@
       input{
         width: 24px;
         height: 24px;
+        background-color: transparent;
       }
     }
     .send{
       font-size: 16px;
       padding: 16px 176px;
     }
+    @include mobile{
+      .contactTitle{
+        font-size: 24px;
+      }
+      .send{
+        padding:16px 142px;
+      }
+    }
   }
 }
 
 @media (max-width:768px) {
-  .contactForm{
-      max-width: 576px;
-  }
-}
-@media (max-width:576px) {
-  .contact{
-    .contactForm{
-        max-width: 375px;
-        .contactTitle{
-          font-size: 24px;
-        }
-        .send{
-          padding:16px 142px;
-      }
-    }
-  }
-}
-
-
-@media (max-width:375px) {
-  .contact{
-    .contactForm{
-      .send{
-          padding:16px 120px;
-      }
-    }
-  }
-}
-@media (max-width:374px) {
   .contact{
     .contactForm{
         max-width: 100%;
@@ -255,5 +219,15 @@
   }
 }
 
+@media (max-width:375px) {
+  .contact{
+    .contactForm{
+      max-width: 100%;
+      .send{
+          padding:16px 120px;
+      }
+    }
+  }
+}
 
 

@@ -49,7 +49,7 @@ body{
 .fd-column{
     flex-direction: column;
 }
-@media (max-width:576px) {
+@media (max-width:767px) {
     .fd-md-column{
         flex-direction: column;
     }

@@ -1,3 +1,16 @@
+//mixin寫法for pad
+@mixin pad{
+    @media(max-width:960px){
+      @content;
+    }
+  }
+//mixin寫法for mobile
+@mixin mobile{
+    @media(max-width:576px){
+        @content;
+    }
+}
+
 .location{
     padding-top: 80px;
     padding-bottom: 80px;
@@ -10,9 +23,24 @@
     }
     .locationChoose{
         margin-bottom: 40px;
+        display: flex;
         p{
             font-size: 24px;
             margin-right: 28px;
+        }
+        .locationSelect{
+            width: 304px;
+        }
+    }
+    @include mobile{
+        .locationChoose{
+            p{
+                font-size: 16px;
+                margin-right: 8px;
+            }
+            .locationSelect{
+                width: 70%;
+            }
         }
     }
 }
@@ -48,25 +76,19 @@
                 color:gray;
             }
         }
-    }       
-}
-@media (max-width:960px) {
-    .locationlist{
-        justify-content: space-around;
-        li{
-            width: 45%;
-        }
     }
-    
-}
-
-@media (max-width:576px) {
-    .locationlist{
+    @include pad{
+        justify-content: space-around;
+            li{
+                width: 45%;
+            }
+    }
+    @include mobile{
         li{
             width: 100%;
         }
-    }
-    
+    }       
 }
+
 
 

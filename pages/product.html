@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,27 +10,32 @@
     <%- include('./layout/header'); -%>
 
     <div class="type">
-        <ul class="typeTitle d-flex ">
-            <li class="text-align-center">
-                <a href="product.html">
-                    <div class="typeName roboto-black-normal fs-32">OPTICAL</div>
-                </a>
-            </li>
-            <li class="text-align-center">
-                <a href="product2.html">
-                    <div class="typeName roboto-black-normal fs-32">SUNGLASSES</div>
-                </a>
-            </li>
-            <li class="text-align-center">
-                <a href="#">
-                    <div class="typeName roboto-black-normal fs-32">FUNCTIONAL</div>
-                </a>
-            </li>
-        </ul>
+        <div class="container">
+            <ul class="typeTitle d-flex ">
+                <li class="text-align-center">
+                    <a class="typeName roboto-black-normal fs-32" href="product.html">OPTICAL
+                    </a>
+                </li>
+                <li class="text-align-center">
+                    <a class="typeName roboto-black-normal fs-32" href="product2.html">SUNGLASSES
+                    </a>
+                </li>
+                <li class="text-align-center">
+                    <a class="typeName roboto-black-normal fs-32" href="#">FUNCTIONAL
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="productBanner d-flex">
-        <img src="../assets/images/product-header-1.png" alt="product-header-1">
-        <img src="../assets/images/product-header-2.png" alt="product-header-2">
+        <picture>
+            <source srcset="../assets/images/product-header-sm-1.png" media="(max-width: 768px)">
+            <img src="../assets/images/product-header-1.png" alt="product-header-1">
+        </picture>
+        <picture>
+            <source srcset="../assets/images/product-header-sm-2.png" media="(max-width: 768px)">
+            <img src="../assets/images/product-header-2.png" alt="product-header-2">
+        </picture>
     </div>
     <div class="productMenu p-80-0">
         <div class="container d-flex fd-column text-align-center">
